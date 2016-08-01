@@ -1,7 +1,3 @@
-// This is a private tool.
-// Please do not distribute the source code.
-// Code written by PlusReed using open-source projects such as vorpal, discord.js, etc. Couldn't have done it without them c:
-
 var vorpal = require('vorpal')();
 var Discord = require('discord.js');
 var config = require('./config.json');
