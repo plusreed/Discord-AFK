@@ -8,6 +8,21 @@ var account = new Discord.Client();
 vorpal.find('exit').remove();
 
 // Online statuses (for if you wanna, I guess)
+vorpal
+  .command("online", "Didn't know what else to call this command")
+  .action(function(args, cb) {
+    account.login(config.email, config.password);
+    account.on('ready', () => { account.setStatus("here", config.game); });
+    cb();
+  });
+vorpal
+  .command("unonline", "I swear these names keep getting better")
+  .action(function(args, cb) {
+    account.login(config.email, config.password);
+    // account.on('ready', () => { account.setStatus("here", null); });
+    account.logout();
+    cb();
+  });
 
 // Idle statuses
 vorpal
@@ -16,7 +31,7 @@ vorpal
     this.log("If you have not closed Discord, then this will do NOTHING to your status!");
     this.log("If you notice no change in your status, then make sure you do not have any Discord instances open anywhere!");
     account.login(config.email, config.password);
-    account.on('ready', () => { account.setStatus("idle", config.game);} ); // I really do hate Discord's API sometimes
+    account.on('ready', () => { account.setStatus("idle", config.game); }); // I really do hate Discord's API sometimes
     cb();
   });
 
@@ -25,7 +40,7 @@ vorpal
   .action(function(args, cb) {
     account.login(config.email, config.password);
     this.log("Un-awaying..."); // what a word
-    account.on('ready', () => { account.setStatus("here", null);} );
+    account.on('ready', () => { account.setStatus("here", null); });
     cb();
   });
 
