@@ -1,5 +1,7 @@
 {
 	"email" : "",
 	"password" : "",
-	"game" : "AFK/Asleep"
+	"game" : "AFK/Asleep",
+	"stream_name" : "",
+	"stream_url" : ""
 }

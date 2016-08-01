@@ -7,6 +7,7 @@ var account = new Discord.Client();
 // Remove exit CLI command -- this is required to log out of Discord without a hanging connection
 vorpal.find('exit').remove();
 
+// Idle statuses
 vorpal
   .command('away', 'Go AFK on Discord')
   .action(function(args, cb) {
@@ -26,6 +27,7 @@ vorpal
     cb();
   });
 
+// Streaming statuses
 vorpal
   .command('stream', 'Stream using the defined variables in config.json')
   .action(function(args, cb) {
