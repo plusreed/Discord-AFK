@@ -49,6 +49,7 @@ vorpal
   .command('stream', 'Stream using the defined variables in config.json')
   .action(function(args, cb) {
     account.login(config.email, config.password);
+    this.log("Setting status to streaming using stream_name" + config.stream_name + " and stream_url " + config.stream_url);
     account.on('ready', () => { account.setStreaming(config.stream_name, config.stream_url, 1); });
     cb();
   });
@@ -57,7 +58,7 @@ vorpal
   .command('stopstream', 'Stop streaming')
   .action(function(args, cb) {
     account.login(config.email, config.password);
-    account.on('ready', () => { account.setStreaming(null, null, 0); });
+    account.on('ready', () => { account.setStreaming(null, null, 0); }); // this might not work idk
     cb();
   });
 
