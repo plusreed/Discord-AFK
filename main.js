@@ -17,16 +17,31 @@ vorpal
     this.log("If you have not closed Discord, then this will do NOTHING to your status!");
     this.log("If you notice no change in your status, then make sure you do not have any Discord instances open anywhere!");
     account.login(config.email, config.password);
-    account.on('ready', () => { account.setStatus("idle", config.game);}); // I really do hate Discord's API sometimes
+    account.on('ready', () => { account.setStatus("idle", config.game);} ); // I really do hate Discord's API sometimes
     cb();
   });
 
 vorpal
   .command('unaway', 'Does what it says')
   .action(function(args, cb) {
-    this.log("Un-awaying...");
-    account.setStatus("here", null);
+    account.login(config.email, config.password);
+    this.log("Un-awaying..."); // what a word
+    account.on('ready', () => { account.setStatus("here", null);} );
     cb();
+  });
+
+vorpal
+  .command('stream', 'Stream using the defined variables in config.json')
+  .action(function(args, cb) {
+    account.login(config.email, config.password);
+    account.on('ready', () => { account.setStreaming(config.stream_name, config.stream_url, 1); });
+  });
+
+vorpal
+  .command('stopstream', 'Stop streaming')
+  .action(function(args, cb) {
+    account.login(config.email, config.password);
+    account.on('ready', () => { account.setStreaming(null, null, 0); });
   });
 
 vorpal
@@ -48,5 +63,5 @@ vorpal
   });
 
 vorpal
-  .delimiter("test#")
+  .delimiter("discord-cli#")
   .show();
