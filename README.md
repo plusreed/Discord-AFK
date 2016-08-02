@@ -10,11 +10,16 @@ When you cd into the repository (`cd Discord-AFK`), rename config-example.json t
 Fill in config.json with the following:
 - Your Discord email (`email`)
 - Your Discord password (`password`)
-- Your away game (`game`) <br />
+- Your away game (`game`)
+- Your stream name (`stream_name`)
+- Your stream URL (**MUST BE A TWITCH.TV URL**) (`stream_url`) <br />
 Once you've done that and saved, you're ready. In a command prompt (current directory must be Discord-AFK or whatever you named your directory to), type `node main.js`. <br />
 
 ###Commands
-To go away and set your away game, type `away`. Discord-AFK will automatically log into your account and set your status whenever your account is ready. <br />
-To come back, type `unaway` (great word choice, I know). It does what it says. It keeps your status to online. <br />
-`info` is just a command explaining why you must close Discord in order to use this. <br />
-`exit` to log out of Discord and exit the CLI.
+_(You can view these at any time by running `help` in the console.)_ <br />
+`away` - Go idle with your defined game in config.json. <br />
+`unaway` - Sets your status to online. <br />
+`online` - Sets status to Online with the idle game. <br />
+`unonline` - Sets game to `null`. <br />
+`stream` - Sets your status to Streaming and uses the stream_name and stream_url in config.json. <br />
+`stopstream` - Attempts to stop streaming. (Might not work just yet)
