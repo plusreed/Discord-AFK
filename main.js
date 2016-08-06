@@ -99,5 +99,5 @@ vorpal
   });
 
 vorpal
-  .delimiter("discord-cli#")
+  .delimiter("Discord-AFK#")
   .show();

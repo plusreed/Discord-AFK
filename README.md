@@ -22,8 +22,9 @@ Once you've done that and saved, you're ready. In a command prompt (current dire
 ###Commands
 _(You can view these at any time by running `help` in the console.)_ <br />
 `away` - Go idle with your defined game in config.json. <br />
-`unaway` - Sets your status to online. <br />
+`unaway` - Sets your status to online. (there's a bug here!) <br />
 `online` - Sets status to Online with the idle game. <br />
-`unonline` - Sets game to `null`. <br />
+`unonline` - Logs you out of Discord. (there's a bug here!) <br />
 `stream` - Sets your status to Streaming and uses the stream_name and stream_url in config.json. <br />
-`stopstream` - Attempts to stop streaming. (Might not work just yet)
+`stopstream` - Logs you out of Discord. (intended... maybe?) <br />
+`ver` (or `version`) - Shows the current Discord-AFK version
