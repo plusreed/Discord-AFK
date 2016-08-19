@@ -8,7 +8,8 @@ Go idle by typing `away` at the command prompt. Come back by typing `unaway`. It
 - discord.js <br />
 
 ###Installation
-As this is not an npm package, you must install from source. <br />
+_(If you do decide to not read this you're not going to get really far with this. Just a warning.)_ <br />
+As this is not an npm package, you must install from source. (This repo might become an npm package _someday_ but for now it's not necessary.)<br />
 Clone this repository (`git clone https://github.com/plusreed/Discord-AFK.git`). <br />
 When you cd into the repository (`cd Discord-AFK`), rename config-example.json to config.json. <br />
 Fill in config.json with the following:
