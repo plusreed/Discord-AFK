@@ -1,7 +1,7 @@
 Discord-AFK
 ---
 Go idle by typing `away` at the command prompt. Come back by typing `unaway`. It's that simple. <br />
-**WARNING:** This does NOT work if you have an active session from within a Discord client! You must close any active Discord desktop/web client before using this. <br />
+**WARNING:** This does NOT work if you have an active session from within a Discord client! You must close any active Discord desktop/web client before using this. The reason for this is that Discord prioritizes Online over Idle.<br />
 
 ###Dependencies
 - vorpal
