@@ -21,6 +21,7 @@ Fill in config.json with the following:
 Once you've done that and saved, you're ready. In a command prompt (current directory must be Discord-AFK or whatever you named your directory to), type `node main.js`. <br />
 
 ###Commands
+**Any command that logs you out of Discord will make some other commands not work properly. Most commands attempt to log you in anyways, but if they don't then type `exit` in the CLI and run `main.js` again.** <br />
 _(You can view these at any time by running `help` in the console.)_ <br />
 `away` - Go idle with your defined game in config.json. <br />
 `unaway` - Sets your status to online.<br />
@@ -29,4 +30,4 @@ _(You can view these at any time by running `help` in the console.)_ <br />
 `stream` - Sets your status to Streaming and uses the stream_name and stream_url in config.json. <br />
 `stopstream` - Logs you out of Discord.<br />
 `ver` (or `version`) - Shows the current Discord-AFK version <br />
-**Any command that logs you out of Discord will make some other commands not work properly. Most commands attempt to log you in anyways, but if they don't then type `exit` in the CLI and run `main.js` again.**
+
