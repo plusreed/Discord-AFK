@@ -10,6 +10,16 @@ var version = "1.0.2";
 // Remove exit CLI command -- this is required to log out of Discord without a hanging connection
 vorpal.find('exit').remove();
 
+// login to Discord
+vorpal
+  .command("login", "Authenticate into Discord")
+  .action(function(args, cb) {
+    account.login(config.email, config.password, function(error) {
+      this.log("This is an error."); // best error messages 2k16
+    });
+    // account.on('ready', () => { vorpal.log("Account is ready for use"); });
+  });
+
 // Online statuses (for if you wanna, I guess)
 vorpal
   .command("online", "Didn't know what else to call this command")
