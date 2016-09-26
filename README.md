@@ -1,3 +1,4 @@
+**Discord-AFK is now deprecated.** No further updates will be pushed to this repo. Please use Discord's built in system now.
 Discord-AFK
 ---
 Go idle by typing `away` at the command prompt. Come back by typing `unaway`. It's that simple. <br />
